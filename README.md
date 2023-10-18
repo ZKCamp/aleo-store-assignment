@@ -37,7 +37,7 @@ This assignment aims to build a toy store to help you understand building privat
     
     The output should be a record similar to:
     
-    ```json
+    ```
     {
       owner: aleo1wcehnzzkm4q6j66szyj0trsmq8crgcsm6829ftvr3v4cht4decgsus3h97.private,
       amount: 10000u64.private,
@@ -56,7 +56,7 @@ This assignment aims to build a toy store to help you understand building privat
     
     No record is emitted. The output should look similar to this: 
     
-    ```json
+    ```
     {
       program_id: store.aleo,
       function_name: add_item,
@@ -70,7 +70,7 @@ This assignment aims to build a toy store to help you understand building privat
 
 <br />
 
-- **buy(token: Token, item: u8, quantity: u64, bill_amount: u64) -> (Token, Item)**: This function allows a user to purchase items from the store by providing a token record, specifying the item to purchase, the quantity desired, and the total bill amount. It calculates the difference between the token amount and the bill amount, creates a new token record with the remaining balance to give back to the user, and returns the purchased item in an item record. It then proceeds to finalize the purchase by adjusting the mappings accordingly.
+- **buy(token: Token, item_id: u8, quantity: u64, bill_amount: u64) -> (Token, Item)**: This function allows a user to purchase items from the store by providing a token record, specifying the item to purchase, the quantity desired, and the total bill amount. It calculates the difference between the token amount and the bill amount, creates a new token record with the remaining balance to give back to the user, and returns the purchased item in an item record. It then proceeds to finalize the purchase by adjusting the mappings accordingly.
     
     
     To verify that you have implemented this correctly, you can run the following command
@@ -79,7 +79,7 @@ This assignment aims to build a toy store to help you understand building privat
     
     The output should contain two records similar to:
     
-    ```json
+    ```
     {
       owner: aleo19q8lac65jcd3m7k4rzv9awrc0euwjhqj6yhcs5nzhrqsnce5zgfqupcr3w.private,
       amount: 9950u64.private,
